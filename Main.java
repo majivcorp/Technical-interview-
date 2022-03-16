@@ -3,6 +3,7 @@ import java.util.Scanner;
 import java.util.stream.*;
 import java.util.*;
 
+
 class Main {
   public static void main(String[] args) {
     Scanner input = new Scanner(System.in);
@@ -11,13 +12,13 @@ class Main {
     
     //int[] nArray = new int[9]; 
     
-    int[] nArray = { 5, 8, 3, 3, 9, 9, 8, 3, 7};
+    int[] nArray = { 1, 3, 0, 6, 9, 2, 5, 4, 4};
     int[] zArray = new int[9];
     int[] yArray = { 1, 2, 1, 2, 1, 2, 1, 2, 1};
     final int size = 9;
     int num = 0;
     int sum = 0;
-    int[] copArray = new int[3];
+    int[] copArray = new int[9];
     
     // For reading  the element
     /*   < - commentted out for test case
@@ -29,13 +30,19 @@ class Main {
     // For adding arrays
     
     for (int i = 0; i < size; i++) {
+      int s = 0, digit, n = 0;
 
       if (nArray[i] * yArray[i] > 9) {
-        copArray[i] = nArray[i] * yArray[i];
-        int cop = copArray[i];
-        int cop1 = cop / nArray[i];
-        int cop2 = cop / yArray[i];
-        zArray[i] = cop1+ cop2;
+        n = nArray[i] * yArray[i];
+  
+        while(n != 0) {
+          digit = n % 10;
+          s = s + digit;
+          n = n/10;
+        }
+        
+        zArray[i] = n;
+
       } else {
         zArray[i] = nArray[i] * yArray[i];
       }
@@ -60,15 +67,16 @@ class Main {
       sum += i;
     // print test
     System.out.println(" The sum is " + sum);
+    System.out.println(zArray[3]);
     
     
     
     //SIN verification if sum % 10 == 0
 
     if (sum % 10 == 0) {
-      System.out.println("SIN is Valid");
+      System.out.println("True");
     } else {
-      System.out.println("SIN is not Valid");
+      System.out.println("False");
     }
   }
 }
