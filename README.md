@@ -1,6 +1,7 @@
 # Technical-interview-
 
 [interview.pdf](https://github.com/majivcorp/Technical-interview-/files/8274699/interview.pdf)
+
 The Technical aspect required a function which validate a SIN, initally timed for 30mins, extra time was given.
 The main branch has inital attempt
 with the code-correction branch containing minor changes and fixes to  the code. Below was the intial draft  prior to starting.
