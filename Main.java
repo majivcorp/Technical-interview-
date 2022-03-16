@@ -67,7 +67,7 @@ class Main {
       case 0: System.out.println("SIN not Valid");
         System.exit(0); //to Terminate a Java Program
         break;
-      case 0: System.out.println("Immigrants & other temp SIN's");
+      case 9: System.out.println("Immigrants & other temp SIN's");
         break;
     }
 
