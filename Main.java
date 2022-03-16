@@ -21,6 +21,7 @@ class Main {
     
     // For reading  the element
     for (int i = 0; i < size; i++) {
+      System.out.println("Please in put your SIN number one at a time");
       nArray[i] = input.nextInt();
     }
     
@@ -53,7 +54,7 @@ class Main {
     
     }
 
-    /* Method to test the validitiy of thee sin */
+    /* Method to test the validitiy of the SIN */
     num = nArray[0];
 
     //The first digit of a SIN is 8 or 0, which indicates 
