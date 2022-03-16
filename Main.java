@@ -17,6 +17,7 @@ class Main {
     final int size = 9;
     int num = 0;
     int sum = 0;
+    int[] copArray = new int[3];
     
     // For reading  the element
     /*   < - commentted out for test case
@@ -26,10 +27,15 @@ class Main {
     */
 
     // For adding arrays
+    
     for (int i = 0; i < size; i++) {
 
       if (nArray[i] * yArray[i] > 9) {
-        zArray[i] = nArray[i] + yArray[i];
+        copArray[i] = nArray[i] * yArray[i];
+        int cop = copArray[i];
+        int cop1 = cop / nArray[i];
+        int cop2 = cop / yArray[i];
+        zArray[i] = cop1+ cop2;
       } else {
         zArray[i] = nArray[i] * yArray[i];
       }
